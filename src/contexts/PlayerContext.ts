@@ -11,7 +11,9 @@ type Episode = {
 type PlayerContextData = {
   episodeList: Episode[]
   currentEpisodeIndex: number
+  isPlaying: boolean
   play: (episode: Episode) => void
+  togglePlay: () => void
 }
 
 export const PlayerContext = createContext({} as PlayerContextData) // createContext recebe o formato dos dados que o context vai iniciar, por exemplo: string'', objeto{}, array[]
